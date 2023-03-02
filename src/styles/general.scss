@@ -1,1 +1,24 @@
 @use 'bootstrap/scss/bootstrap';
+@use "../styles/partials/variables" as *;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+a,
+a:hover {
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.light {
+    background: #f3f5f7;
+}
+
+
+ a {
+     color: inherit;
+ }
+
+ h1 {
+     margin-bottom: 0.5rem;
+     font-weight: 500;
+     line-height: 1.2;
+ }
