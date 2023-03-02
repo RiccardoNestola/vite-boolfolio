@@ -19,7 +19,7 @@ export default {
                 }
             })
                 .then((response) => {
-                    console.log(response.data.results.data);
+                    this.project(response.data.results.data);
                 })
                 .catch(function (error) {
                     console.log(error);
