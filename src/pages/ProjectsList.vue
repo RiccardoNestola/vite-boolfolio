@@ -1,9 +1,9 @@
 <script lang="js">
-import AppCard from './AppCard.vue';
+import AppCard from '../components/AppCard.vue';
 import axios from 'axios';
 
 export default {
-    name:'AppMain',
+    name: 'ProjectList',
     components: {
         AppCard
     },
@@ -44,10 +44,6 @@ export default {
             <AppCard v-for="project in projects" :projectCard="project" />
         </div>
     </main>
-    
-    
 </template>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>
