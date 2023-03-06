@@ -35,26 +35,20 @@ export default {
           </a>
 
           <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><router-link :to="{name:'home'}" class="nav-link px-2 link-dark"> Home</router-link></li>
-            <li><router-link :to="{ name: 'projects' }" class="nav-link px-2 link-dark"> Progetti</router-link></li>
-            <li><router-link :to="{ name: 'about-us' }" class="nav-link px-2 link-dark">About</router-link></li>
+            <li><router-link :to="{name:'home'}" class="nav-link px-2 "       :class="this.$route.name === 'home' ? 'text-danger': 'text-dark' "> Home</router-link></li>
+            <li><router-link :to="{ name: 'projects' }" class="nav-link px-2" :class="this.$route.name === 'projects' ? 'text-danger' : 'text-dark'"> Progetti</router-link></li>
+            <li><router-link :to="{ name: 'about-us' }" class="nav-link px-2" :class="this.$route.name === 'about-us' ? 'text-danger' : 'text-dark'">About</router-link></li>
           </ul>
-          
+
           <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-outline-primary me-2">Login</button>
-            <button type="button" class="btn btn-primary">Accedi</button>
+            <button type="button" class="btn btn-outline-dark me-2">Login</button>
+            <button type="button" class="btn btn-dark">Accedi</button>
           </div>
         </header>
       </div>
     </header>
 
-    <section>
-        <div class="container py-2">
-            <div class=" text-left text-dark" id="main-title">
-                <h1>Hi, my name is Riccardo im a web developer, drummer and apple technician</h1>
-            </div>
-        </div>
-    </section>
+   
 </template>
 
 <style lang="scss" scoped>

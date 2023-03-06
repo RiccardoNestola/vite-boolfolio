@@ -3,7 +3,13 @@
 
 export default {
     name:'AppCard',
-    props: ['projectCard'],
+    props: {
+
+        'projectCard':{
+            type: Object,
+            required: true,
+        }
+    },
 
     data() {
         return {
@@ -31,7 +37,7 @@ export default {
     				<h1 class="postcard__title blue"><a href="#">{{ projectCard.title }}</a></h1>
     				<div class="postcard__subtitle small">
     					<p>
-    						<!-- <i class="fas fa-calendar-alt mr-2"></i> --> <font-awesome-icon icon="fa-solid fa-microchip" /> <span>{{ projectCard.date_added }}</span>
+    						<i class="fas fa-calendar-alt mr-2"></i> <span>{{ projectCard.date_added }}</span>
     					</p>
     				</div>
     				<div class="postcard__bar"></div>
@@ -39,14 +45,16 @@ export default {
     				<ul class="postcard__tagbox">
     					<li class="tag__item"><i class="fas fa-tag mr-2 px-1"></i>{{ projectCard.category }}</li>
     					<li class="tag__item"><i class="fa-regular fa-calendar px-1"></i>{{ projectCard.year }}</li>
-    					<li class="tag__item play blue">
-    						<a href="#"><font-awesome-icon icon="fa-solid fa-microchip" /><!-- <i class="fa-solid fa-microchip px-1"></i></i> --><!-- {{ projectCard.type.name }} --></a>
-    					</li>
+                        <li class="tag__item"><i class="fa-solid fa-microchip px-1"></i>Wordpress</li>
+                        
     				</ul>
+                    <div class="py-2">
+                        <router-link  class="btn btn-outline-dark" :to="{ name: 'project', params: { id: projectCard.id } }" :class="this.$route.name === 'project' ? 'd-none' : ''"> Open Project </router-link>
+                    </div>
+                    
     			</div>
     		</article>
-
-
+            
     
 </template>
 
