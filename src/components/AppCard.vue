@@ -45,11 +45,11 @@ export default {
     				<ul class="postcard__tagbox">
     					<li class="tag__item"><i class="fas fa-tag mr-2 px-1"></i>{{ projectCard.category }}</li>
     					<li class="tag__item"><i class="fa-regular fa-calendar px-1"></i>{{ projectCard.year }}</li>
-                        <li class="tag__item"><i class="fa-solid fa-microchip px-1"></i>Wordpress</li>
+                        <li class="tag__item" v-for="technology in projectCard.technologies"><i class="fa-solid fa-microchip px-1"></i>{{ technology.name }} </li>
                         
     				</ul>
                     <div class="py-2">
-                        <router-link  class="btn btn-outline-dark" :to="{ name: 'project', params: { id: projectCard.id } }" :class="this.$route.name === 'project' ? 'd-none' : ''"> Open Project </router-link>
+                        <router-link  class="btn btn-outline-dark" :to="{ name: 'project', params: { id: projectCard.id } }" :class="this.$route.name === 'project' ? 'd-none' : ''"> Apri Progetto </router-link>
                     </div>
                     
     			</div>
