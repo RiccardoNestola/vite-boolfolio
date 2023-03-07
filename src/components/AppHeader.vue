@@ -41,8 +41,8 @@ export default {
           </ul>
 
           <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-outline-dark me-2">Login</button>
-            <button type="button" class="btn btn-dark">Accedi</button>
+            <a type="button" class="btn btn-outline-dark me-2" href="http://127.0.0.1:8000/login">Login</a>
+            <a type="button" class="btn btn-dark" href="http://127.0.0.1:8000/register">Registrati</a>
           </div>
         </header>
       </div>
